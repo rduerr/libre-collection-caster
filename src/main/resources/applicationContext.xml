@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:util="http://www.springframework.org/schema/util"
+
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+        http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd"
+	default-autowire="byName">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+       
+	<jaxrs:server id="CollectionCasterService"
+		serviceClass="org.nsidc.feeds.collection_caster_services.CollectionCasterServiceImpl"
+		address="/">
+		<jaxrs:providers>
+			<ref bean="feed" />
+			<ref bean="entry" />
+			<ref bean="jaxbProvider" />
+		</jaxrs:providers>
+	</jaxrs:server>
+
+	<bean id="jaxbProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider">
+		<property name="marshallerProperties" ref="propertiesMap" />
+	</bean>
+	<util:map id="propertiesMap">
+		<entry key="jaxb.formatted.output">
+			<value type="java.lang.Boolean">true</value>
+		</entry>
+	</util:map>
+	<bean id="feed" class="org.apache.cxf.jaxrs.provider.AtomFeedProvider" />
+	<bean id="entry" class="org.apache.cxf.jaxrs.provider.AtomEntryProvider" />
+
+
+</beans>

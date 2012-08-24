@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml"
+    xmlns:georss="http://www.georss.org/georss">
+
+    <author>
+        <!-- Organization or individual that administers this FEED -->
+        <name>NSIDC</name>
+        <!-- Email address for user support -->
+        <email>nsidc@nsidc.org</email>
+    </author>
+    <!-- Date and time the content of this FEED was last refreshed -->
+    <updated>2009-11-18T18:30:02Z</updated>
+    <!-- This title tag is the headline for your FEED. It should be carefully worded to attract the users you would like to reach. -->
+    <title>Collection Caster Example Feed</title>
+    <!-- This id tag should be a globally unique indentifier.  -->
+    <!-- We recommend using a Universally Unique Identifier, or UUID (for examples see http://en.wikipedia.org/wiki/Universally_unique_identifier) -->
+    <id>http://nsidc.org/data/feed/nsidc.xml</id>
+    
+    <!-- To help ensure that Earth Science aggregators automatically retrieve and interpret your feed, we recommend utilizing ESIP specifications in the entries below. -->
+    <!-- Please refer to http://wiki.esipfed.org/index.php/Discovery_Cluster -->
+    
+    <!-- Each data set or collection that you wish to advertise must have a separate entry as follows: -->
+    <entry>
+        <!-- Name of this entry's data set or collection. -->
+        <title>Canadian Ice Service Arctic Regional Sea Ice Charts in SIGRID-3
+            Format</title>
+        <!-- Optional URL to a web page about this data set or collection -->
+        <link rel="http://esipfed.org/ns/discovery/1.1/documentation#" type="text/html" href="http://nsidc.org/data/g02171.html" />
+
+        <!-- Optional URL to a metadata record for this data set or collection -->
+        <link rel="http://esipfed.org/ns/discovery/1.1/metadata#" type="application/xml"
+            href="http://nsidc.org/cgi-bin/get_metadata.pl?id=g02171&amp;format=FGDC" />
+
+        <!-- Optional URL to access the data in this data set/collection -->
+        <link rel="http://esipfed.org/ns/discovery/1.1/data#" type="application/x-tar"
+            href="ftp://sidads.colorado.edu/pub/DATASETS/NOAA/G02171/" />
+        
+        <author>
+            <!-- Organization or individual that generated this entry -->
+            <name>Dan Fequet</name>
+            <!-- Email address for user support for this entry -->
+        </author>
+        <!-- This id tag should be the unique identifier for this DATA SET OR COLLECTION. -->
+        <id>http://nsidc.org/data/g02171.html</id>
+        <!-- Date/time that this entry was last updated -->
+        <updated>2011-05-25T14:01:54Z</updated> 
+        
+        <!-- Data Set description -->
+        <!--   A brief description of the data set that provides users with enough information to determine the usefulness of the data set. -->
+        <!--   Should include brief statements of the following important information.      
+                  - Parameters, Product type (in situ instruments and sensor data record) and sensor/source information 
+                                         (including if data were obtained from another institution, e.g., NOAA, NIC, etc.).         
+                  - Temporal and geographical coverage and any existing large gaps in data set coverage.
+                  - Units and resolution.
+                  - Data processing level/sampling (gridded, binned, swath) and any other parameters.
+                  - Ordering information.
+                  - Data format, data set size, and product media.
+                  - Brief discussion of ancillary data sets needed for processing.
+                  - Read software and analytical tools (if available, no need for great detail in the summary, just mention existence). -->
+        
+        <summary type="text">The Canadian Ice Service (CIS) produces digital Arctic regional sea ice charts for marine navigation, climate
+            research, and input to the Global Digital Sea Ice Data Bank (GDSIDB).  The ice charts are created through the manual analysis of in situ,
+            satellite, and aerial reconnaissance data. The ice charts have information on ice concentration, stage of development, and ice form,
+            following World Meteorological Organization terminology. These sea ice charts begin in 2006 and cover the following regions of the
+            Canadian Arctic: Northern Canadian waters (Western Arctic, Eastern Arctic, and Hudson Bay) and Southern Canadian waters (Great Lakes and
+            East Coast). Each regional shapefile (.shp) (encoded in SIGRID-3 format) and associated metadata file (.xml) are combined into a tar
+            archive file (.tar) for distribution. All data are available via FTP.
+        </summary>
+        <!-- Data Set Geospatial Extent  -->
+        <!-- Bounding Box in geoRSS-simple format -->
+        <georss:box>83.193722 21.969245 39.527768 164.050015</georss:box>
+        <!-- Data set temporal coverage  -->
+        <!--     Start Date/Time in ISO 8601 string format -->
+        <time:start>2006-05-01</time:start>
+        <!--     Stop Date/Time in ISO 8601 string format -->
+        <time:end>2011-09-01</time:end>
+    </entry>
+</feed>
