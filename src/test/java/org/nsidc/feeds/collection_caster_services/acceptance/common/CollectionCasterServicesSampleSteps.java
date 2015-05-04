@@ -1,5 +1,11 @@
 package org.nsidc.feeds.collection_caster_services.acceptance.common;
 
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+import static org.nsidc.feeds.validator.Validators.validAtomFeed;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -9,12 +15,9 @@ import org.apache.http.client.ClientProtocolException;
 import org.nsidc.feeds.collection_caster_services.CollectionCasterService;
 import org.nsidc.feeds.collection_caster_services.StringToFeedConverter;
 import org.nsidc.feeds.collection_caster_services.acceptance.EnvironmentSpecificSteps;
-import org.nsidc.feeds.validator.Validators;
 
-import static org.nsidc.feeds.validator.Validators.*;
-import cuke4duke.annotation.I18n.EN.*;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class CollectionCasterServicesSampleSteps {
 	private String pageContent;

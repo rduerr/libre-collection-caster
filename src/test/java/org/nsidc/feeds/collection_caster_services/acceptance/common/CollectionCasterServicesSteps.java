@@ -29,9 +29,11 @@ import org.nsidc.feeds.collection_caster_services.bean.EntryBuilderInput;
 import org.nsidc.feeds.collection_caster_services.bean.FeedBuilderInput;
 import org.nsidc.feeds.collection_caster_services.bean.LinkBean;
 
-import cuke4duke.annotation.I18n.EN.Given;
-import cuke4duke.annotation.I18n.EN.Then;
-import cuke4duke.annotation.I18n.EN.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+
+
 
 public class CollectionCasterServicesSteps {
 	private UriInfo uriInfo;

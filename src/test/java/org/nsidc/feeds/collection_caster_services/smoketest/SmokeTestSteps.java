@@ -1,16 +1,19 @@
 package org.nsidc.feeds.collection_caster_services.smoketest;
 
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 
 import org.apache.http.client.ClientProtocolException;
 
-import cuke4duke.annotation.*;
-import cuke4duke.annotation.I18n.EN.*;
-
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class SmokeTestSteps {
 	

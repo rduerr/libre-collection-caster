@@ -2,7 +2,6 @@ package org.nsidc.feeds.collection_caster_services.acceptance.web;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Properties;
 
 import org.apache.abdera.model.Entry;
 import org.apache.http.client.ClientProtocolException;
@@ -11,9 +10,9 @@ import org.nsidc.feeds.collection_caster_services.StringToFeedConverter;
 import org.nsidc.feeds.collection_caster_services.acceptance.EnvironmentSpecificSteps;
 import org.nsidc.feeds.collection_caster_services.acceptance.HttpResourceHelper;
 
-import cuke4duke.annotation.Before;
-import cuke4duke.annotation.I18n.EN.Given;
-import cuke4duke.annotation.I18n.EN.When;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 public class WebEnvironmentSteps implements EnvironmentSpecificSteps {
 

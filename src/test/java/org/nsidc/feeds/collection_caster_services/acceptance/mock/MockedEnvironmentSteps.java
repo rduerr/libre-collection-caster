@@ -23,9 +23,9 @@ import org.nsidc.feeds.collection_caster_services.acceptance.EnvironmentSpecific
 import org.nsidc.feeds.collection_caster_services.acceptance.HttpResourceHelper;
 import org.nsidc.feeds.collection_caster_services.bean.EntryBuilderInput;
 
-import cuke4duke.annotation.Before;
-import cuke4duke.annotation.I18n.EN.Given;
-import cuke4duke.annotation.I18n.EN.When;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 public class MockedEnvironmentSteps implements EnvironmentSpecificSteps {
 

@@ -4,7 +4,8 @@ import org.apache.abdera.model.Feed;
 import org.nsidc.feeds.collection_caster_services.CollectionCasterServiceImpl;
 import org.nsidc.feeds.collection_caster_services.acceptance.EnvironmentSpecificSteps;
 
-import cuke4duke.annotation.Before;
+import cucumber.api.java.Before;
+
 
 public class CommonSteps {
 
